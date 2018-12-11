@@ -1,2 +1,2 @@
 # Album-Google-Photos
-React Application that shows an albums of Google Photos API.
+React Application that shows an album of Google Photos API.

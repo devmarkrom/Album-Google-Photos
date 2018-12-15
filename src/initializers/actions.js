@@ -49,3 +49,16 @@ export const clearAlbum = ()=>{
         type: 'CLEAR_ALBUM'
     }
 }
+
+export const setPhotos = (photos)=>{
+    return{
+        type: 'SET_PHOTOS',
+        photos
+    }
+}
+
+export const clearPhotos = ()=>{
+    return{
+        type: 'CLEAR_PHOTOS'
+    }
+}

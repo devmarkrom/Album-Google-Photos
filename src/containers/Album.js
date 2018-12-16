@@ -7,7 +7,7 @@ import Axios from 'axios';
 class Album extends Component {
     
     componentDidUpdate(prevProps){
-        if(this.props.mainAlbum){
+        if(this.props.mainAlbum && this.props.mainAlbum !== prevProps.mainAlbum){
             if(process.env.NODE_ENV === 'production'){
             // if(true){
                 this.loadPhotos()
@@ -30,7 +30,6 @@ class Album extends Component {
              albumId: this.props.mainAlbum.id
            }
         }).then(r=>{
-            console.log(r);
             this.props.setPhotos(r.data.mediaItems);
         })
     }

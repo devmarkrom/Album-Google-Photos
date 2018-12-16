@@ -33,7 +33,7 @@ export default withStyles({
     container:{
         display: 'flex',
         flexDirection: 'row',
-        overflowX: 'scroll',
+        overflowX: 'auto',
         justifyContent: 'center',
         padding: '1em 0'
     },

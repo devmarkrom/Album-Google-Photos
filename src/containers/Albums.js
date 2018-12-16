@@ -8,12 +8,17 @@ import AlbumsList from '../components/AlbumsList';
 class Albums extends Component {
     componentDidMount(){
         if(process.env.NODE_ENV === 'production'){
+        // if(true){
             this.loadPhotos();
         }else{
             import('../data/albums').then(module=>{
                 this.props.setAlbums(module.default.albums);
             })
         }
+
+        // setTimeout(() => {
+        //     this.props.clearAlbums()
+        // }, 3000);
     }
     loadPhotos(){
         axios({
@@ -27,7 +32,11 @@ class Albums extends Component {
         }).catch(console.log);
     }
     render() {
-    return <AlbumsList setAlbum={this.props.setAlbum} albums={this.props.albums} />;
+    return (<AlbumsList 
+                mainAlbum={this.props.mainAlbum} 
+                setAlbum={this.props.setAlbum} 
+                albums={this.props.albums}
+            />);
     }
 }
 

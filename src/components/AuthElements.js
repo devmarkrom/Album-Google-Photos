@@ -9,7 +9,7 @@ const AuthElements =  function(props){
 
     const logInButton = ()=>{
         if(props.user) return (
-        [<Avatar src={props.user.providerData[0].photoURL} />,(<IconButton color="inherit" onClick={props.logout}><ExitToApp /></IconButton>)]
+        [<Avatar key='auth-avatar-element' src={props.user.providerData[0].photoURL} />,(<IconButton  key='auth-sign-out-button-element' color="inherit" onClick={props.logout}><ExitToApp /></IconButton>)]
         );
         return (<Button variant="contained" onClick={props.login}>
         Iniciar sesión con Google

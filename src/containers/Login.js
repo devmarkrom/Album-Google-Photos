@@ -16,9 +16,9 @@ class Login extends Component{
         // };
     }
 
-    componentDidMount(){
-        console.log(this.props.token);
-    }
+    // componentDidMount(){
+    //     console.log(this.props.token);
+    // }
 
     login(){
         let provider = new firebase.auth.GoogleAuthProvider();
